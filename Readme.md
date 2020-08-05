@@ -1,0 +1,89 @@
+#
+Backend for Joy Ride Front end
+
+##
+to run backend:  npm install => npm start
+
+##
+To setup Database
+Setup Mongo DB locally
+
+Create the data fields 
+
+There are 5 tables which are following:
+
+User Table(static will be connected with other tables through primary key):
+username
+Name
+Email
+phone number
+login info(if logged through fb or gmail data is different make a dummy datatype for now)
+location history: co-ordinates
+EXAMPLE JSON FORMAT
+{"username":"test1","name":"test1","email":"test1","phonenum":"test1","password":"test1",}
+
+
+
+Live Driver Table:
+--(Fields from user table will be connected through key)
+primary key
+Start Location
+End location
+Start time
+End time
+Car Make/Model
+Driver Price(=passenger cost - service charge)
+live passenger rating
+EXAMPLE JSON
+{"username":"test1","startlocation":"test1","endlocation":"test1","starttime":"test1","endtime":"test1","price":"test1","passengerrating":"test1","car":"test1"}
+
+
+Live Passenger Table:
+--(Fields from user table will be connected through key)
+primary key
+Start Location
+End location
+Start time
+End time
+Car Make/Model
+Passenger cost(driver fee + service charge)
+live passenger rating
+EXAMPLE JSON
+{"username":"test1","startlocation":"test1","endlocation":"test1","starttime":"test1","endtime":"test1","price":"test1","passengerrating":"test1","car":"test1"}
+
+
+
+
+
+
+Driver History table:
+primary key
+Passenger name history
+Start Location history
+End location history
+Start time history
+End time history
+Number of times travelled
+Rating history
+Car Make/Model history
+Passenger Cost history
+EXAMPLE JSON
+{"username":"test1","startlocationdh":"test1","endlocationdh":"test1","starttimedh":"test1","endtimedh":"test1","pricedh":"test1","passengerratingdh":"test1","cardh":"test1","driverusernamedh":"test1","numtimestravelleddh":"test1"}
+
+
+
+
+
+Passenger History:
+primary key
+Passenger name history
+Start Location history
+End location history
+Start time history
+End time history
+Number of times travelled
+Rating history
+Car Make/Model history
+Passenger Cost history
+EXAMPLE JSON
+{"username":"test1","startlocationph":"test1","endlocationph":"test1","starttimeph":"test1","endtimeph":"test1","priceph":"test1","passengerratingph":"test1","carph":"test1","driverusernameph":"test1","numtimestravelledph":"test1"}
